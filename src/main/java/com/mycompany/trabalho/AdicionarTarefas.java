@@ -4,7 +4,9 @@
  */
 package com.mycompany.trabalho;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  *
@@ -13,7 +15,7 @@ import java.util.ArrayList;
 public class AdicionarTarefas {
     
    private  ArrayList<Tarefa>tarefas;
-
+   private Scanner sc= new Scanner(System.in);
     public AdicionarTarefas(ArrayList<Tarefa> tarefas) {
         this.tarefas = tarefas;
     }
@@ -21,13 +23,19 @@ public class AdicionarTarefas {
     public void adicionar(){
         Tarefa ta = new Tarefa();
         System.out.println("Titulo");
-        ta.getTitulo();
+        ta.setTitulo(sc.nextLine());
         System.out.println("Descricao");
-        ta.getDescricao();
+        ta.setDescricao(sc.nextLine());
         System.out.println("Data Vencimento");
-        ta.getDataVencimento();
+        String dataVencimento = sc.nextLine();
+        ta.setDataVencimento(LocalDate.MIN);
         System.out.println("Status");
-        ta.getStats();
-        tarefas.add(ta); 
+        String status=sc.nextLine(); // Consumir o caractere de nova linha pendente, se necessário
+        ta.setStats(Tarefa.Stat.PENDENTE);
+        tarefas.add(ta);
+        /*System.out.println("Tarefa: " + tarefas.size());
+        for(Tarefa t: tarefas){
+            System.out.println("Titulo"+ t.getTitulo());
+        }*/
     }
 }
