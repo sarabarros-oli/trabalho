@@ -9,5 +9,5 @@ package com.mycompany.trabalho;
  * @author sarah
  */
 public class Main {
-    
+    int i=0;
 }
