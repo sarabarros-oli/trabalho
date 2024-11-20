@@ -4,10 +4,27 @@
  */
 package com.mycompany.trabalho;
 
+import java.util.ArrayList;
+
 /**
  *
- * @author taina
+ * @author tainara
  */
 public class GerenciaListar {
+    private ArrayList<Tarefa> tarefas;
+
+    public GerenciaListar(ArrayList<Tarefa> tarefas) {
+        this.tarefas = tarefas;
+    }
     
+    public void inicial(){
+        for(Tarefa tar :tarefas){
+            System.out.println("TAREFA Nº "+ tarefas.size()+1);
+            System.out.println("Titulo: " + tar.getTitulo());
+            System.out.println("Descrição: "+ tar.getDescricao());
+            System.out.println("Status:" + tar.getStats());
+            System.out.println("Data de Vencimento:" + tar.getDataVencimento());
+        }
+        }
+   
 }
