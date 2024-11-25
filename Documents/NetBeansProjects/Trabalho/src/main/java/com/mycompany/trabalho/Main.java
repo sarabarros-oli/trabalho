@@ -35,13 +35,13 @@ public class Main {
                        ad.adicionar();
                        break;
                    case 2:
-                       gl.listarNomal();
+                   
                        break;
                    case 3:
                        
                        break;
                    case 4:
-                       
+                           gl.listarNomal();
                        break;
                    case 5:
                        System.out.println("Encerrando programa");
