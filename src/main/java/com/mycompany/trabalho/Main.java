@@ -17,6 +17,7 @@ public class Main {
            ArrayList<Tarefa> tarefa = new ArrayList<>();
          AdicionarTarefas ad =new AdicionarTarefas(tarefa);
          AlterarTarefas at=new AlterarTarefas(tarefa);
+         ExcluirTarefas et = new ExcluirTarefas(tarefa);
            Scanner sc = new Scanner(System.in);
            int op;
            do{
@@ -38,7 +39,7 @@ public class Main {
                        at.alterar();
                        break;
                    case 3:
-                       
+                       et.excluir();
                        break;
                    case 4:
                        
