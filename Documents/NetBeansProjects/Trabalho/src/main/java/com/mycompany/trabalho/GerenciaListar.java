@@ -54,16 +54,18 @@ public class GerenciaListar {
        }        } else if (esc==3){
                           
         ArrayList<Tarefa> tarefasOrdenadas = new ArrayList<>();
-        Collections.copy(tarefasOrdenadas, tarefas);
+        for(Tarefa t : tarefas){
+            tarefasOrdenadas.add(t);
+        }
 
         // Ordenar o novo ArrayList por data de vencimento
         Collections.sort(tarefasOrdenadas, Comparator.comparing(Tarefa::getDataVencimento));
          for(Tarefa tar :tarefasOrdenadas){
-            System.out.println("TAREFA Nº "+ tarefas.size()+1);
-           System.out.println("Titulo: " + tar.getTitulo());
+             System.out.println("Titulo: " + tar.getTitulo());
             System.out.println("Descrição: "+ tar.getDescricao());
             System.out.println("Status:" + tar.getStats());
             System.out.println("Data de Vencimento:" + tar.getDataVencimento());
+             System.out.println("--------------");
            }
                         
                         
