@@ -16,6 +16,7 @@ public class Main {
         System.out.println("Hello World!");
            ArrayList<Tarefa> tarefa = new ArrayList<>();
          AdicionarTarefas ad =new AdicionarTarefas(tarefa);
+         AlterarTarefas at=new AlterarTarefas(tarefa);
            Scanner sc = new Scanner(System.in);
            int op;
            do{
@@ -34,7 +35,7 @@ public class Main {
                        ad.adicionar();
                        break;
                    case 2:
-                       
+                       at.alterar();
                        break;
                    case 3:
                        
