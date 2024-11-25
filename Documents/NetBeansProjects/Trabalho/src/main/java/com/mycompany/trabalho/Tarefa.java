@@ -11,11 +11,7 @@ import java.time.LocalDate;
  * @author tainara
  */
 public class Tarefa {
-     enum Stat{
-         PENDENTE,
-         EM_ANDADAMENTO,
-         CONCLUIDO
-     }
+   
     private String titulo;
     private String descricao;
     private LocalDate dataVencimento;
