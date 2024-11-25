@@ -34,9 +34,9 @@ public class AdicionarTarefas {
         ta.setDataVencimento(LocalDate.parse(dataVencimento));
 
         Tarefa.Stat status = escolherStatus();
-        ta.setStats(status);
+        ta.setStats(status); 
 
-        tarefas.add(ta);
+        tarefas.add(ta); 
 
         System.out.println("Tarefa adicionada com sucesso!");
         for (Tarefa t : tarefas) {
