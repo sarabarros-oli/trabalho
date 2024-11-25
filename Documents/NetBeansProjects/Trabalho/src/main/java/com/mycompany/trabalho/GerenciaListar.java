@@ -24,11 +24,12 @@ public class GerenciaListar {
     public void listarNomal(){
        
         for(Tarefa tar :tarefas){
-            System.out.println("TAREFA Nº "+ tarefas.size()+1);
+            //System.out.println("TAREFA Nº "+ tarefas.size()+1);
             System.out.println("Titulo: " + tar.getTitulo());
             System.out.println("Descrição: "+ tar.getDescricao());
             System.out.println("Status:" + tar.getStats());
             System.out.println("Data de Vencimento:" + tar.getDataVencimento());
+            System.out.println("--------------");
         }
         }
    public void listarStatus(){
